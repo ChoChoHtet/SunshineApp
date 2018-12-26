@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/item_weather_icon"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+    />
+    <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline2"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+    <TextView
+            android:text="TextView"
+            android:textSize="16sp"
+            tools:text="Thursday"
+            android:fontFamily="sans-serif"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_today"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintStart_toEndOf="@+id/item_weather_icon"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"/>
+    <TextView
+            android:text="TextView"
+            tools:text="Cloudy"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_weather_description"
+            app:layout_constraintStart_toStartOf="@+id/item_today"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"/>
+    <TextView
+            android:text="TextView"
+            android:textSize="20sp"
+            tools:text="19\u00b0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_high_temperature"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/item_ow_temperature" android:layout_marginRight="8dp"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"/>
+    <TextView
+            android:text="TextView"
+            android:textSize="20sp"
+            tools:text="15\u00b0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_ow_temperature"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+</android.support.constraint.ConstraintLayout>
