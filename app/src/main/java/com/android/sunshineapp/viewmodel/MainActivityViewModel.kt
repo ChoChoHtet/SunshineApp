@@ -22,8 +22,8 @@ class MainActivityViewModel(private val repository: SunshineRepository):ViewMode
     /**
      * from network
      */
-    fun getCurrentData():LiveData<List<WeatherList>>{
+    /*fun getCurrentData():LiveData<List<WeatherList>>{
         return repository.getCurrentData()
-    }
+    }*/
 
 }

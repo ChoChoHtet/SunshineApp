@@ -17,7 +17,7 @@ class WeatherNetworkDataSource(private val appExecutor: AppExecutor) {
     //singleton
     companion object {
         private var sInstance:WeatherNetworkDataSource?=null
-        const val NUMBER=14
+        const val NUMBER=40
         fun getInstanceSource(appExecutor: AppExecutor):WeatherNetworkDataSource{
             if (sInstance !=null)
                 return sInstance!!
@@ -32,7 +32,6 @@ class WeatherNetworkDataSource(private val appExecutor: AppExecutor) {
     fun getAllWeather():LiveData<List<WeatherList>>{
         return downloadedData
     }
-   // fun getListSize():Int=weatherListSize.size
 
     //fetch data
     fun fetchWeatherData(){
